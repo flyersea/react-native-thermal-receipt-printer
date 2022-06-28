@@ -475,4 +475,12 @@ public class USBPrinterAdapter implements PrinterAdapter {
                 (int) (image.getHeight() * decreaseSizeBy), true);
         return resized;
     }
+
+    @Override
+    public void connectAndSend(String host, Integer port, String data, Callback successCallback, Callback errorCallback) {
+    }
+
+    @Override
+    public void connectAndSend(PrinterDeviceId printerDeviceId, String data, Callback successCallback, Callback errorCallback) {
+    }
 }
