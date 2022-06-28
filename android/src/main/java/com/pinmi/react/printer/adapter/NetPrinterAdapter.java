@@ -84,7 +84,7 @@ public class NetPrinterAdapter implements PrinterAdapter {
     @Override
     public void init(ReactApplicationContext reactContext, Callback successCallback, Callback errorCallback) {
         this.mContext = reactContext;
-        successCallback.invoke();
+        // successCallback.invoke();
     }
 
     @Override
