@@ -10,6 +10,10 @@
 
 #import "RNBLEPrinter.h"
 #import "PrinterSDK.h"
+#import "adapters/epson/BLEPrinterEpsonAdapter.h"
+#import "adapters/generic/BLEPrinterGenericAdapter.h"
+#import "utils/NSDataAdditions.h"
+#import "utils/EpsonUtils.h"
 
 @implementation RNBLEPrinter
 
@@ -243,4 +247,24 @@ RCT_EXPORT_METHOD(closeConn) {
     }
 }
 
+RCT_EXPORT_MODULE()
+
+RCT_EXPORT_METHOD(connectAndSend:(NSString *)bdAddress
+                  printRawData:(NSString *)text
+                  brand:(NSString *)brand
+                  success:(RCTResponseSenderBlock)successCallback
+                  fail:(RCTResponseSenderBlock)errorCallback) {
+    @try {
+        if ([brand  isEqual: @"EPSON"]) {
+            BLEPrinterEpsonAdapter *adapter = [BLEPrinterEpsonAdapter alloc];
+            [adapter connectAndSend:bdAddress printRawData:text success:successCallback fail:errorCallback];
+        }
+        else {
+            BLEPrinterGenericAdapter *adapter = [BLEPrinterGenericAdapter alloc];
+            [adapter connectAndSend:bdAddress printRawData:text success:successCallback fail:errorCallback];
+        }
+    } @catch (NSException *exception) {
+        errorCallback(@[exception.reason]);
+    }
+}
 @end

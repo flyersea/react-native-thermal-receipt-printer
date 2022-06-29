@@ -49,5 +49,15 @@ RCT_EXPORT_METHOD(closeConn) {
     // TODO
 }
 
+RCT_EXPORT_MODULE()
+
+RCT_EXPORT_METHOD(connectAndSend:(NSInteger)vendorId
+                  withProductID:(NSInteger)productId
+                  printRawData:(NSData *)text
+                  success:(RCTResponseSenderBlock)successCallback
+                  fail:(RCTResponseSenderBlock)errorCallback) {
+    // TODO
+    errorCallback(@[@"This function is not supported"]);
+}
 @end
 

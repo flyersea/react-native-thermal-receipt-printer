@@ -13,6 +13,10 @@
 #include <arpa/inet.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "adapters/epson/NetPrinterEpsonAdapter.h"
+#import "adapters/generic/NetPrinterGenericAdapter.h"
+#import "utils/NSDataAdditions.h"
+#import "utils/EpsonUtils.h"
 
 NSString *const EVENT_SCANNER_RESOLVED = @"scannerResolved";
 NSString *const EVENT_SCANNER_RUNNING = @"scannerRunning";
@@ -291,6 +295,28 @@ RCT_EXPORT_METHOD(printQrCode:(NSString *)qrCode
             [[PrinterSDK defaultPrinterSDK] printQrCode:qrCode ];
         }
         
+    } @catch (NSException *exception) {
+        errorCallback(@[exception.reason]);
+    }
+}
+
+RCT_EXPORT_MODULE()
+
+RCT_EXPORT_METHOD(connectAndSend:(NSString *)host
+                  withPort:(nonnull NSNumber *)port
+                  printRawData:(NSString *)text
+                  brand:(NSString *)brand
+                  success:(RCTResponseSenderBlock)successCallback
+                  fail:(RCTResponseSenderBlock)errorCallback) {
+    @try {
+        if ([brand  isEqual: @"EPSON"]) {
+            NetPrinterEpsonAdapter *adapter = [NetPrinterEpsonAdapter alloc];
+            [adapter connectAndSend:host withPort:port printRawData:text success:successCallback fail:errorCallback];
+        }
+        else {
+            NetPrinterGenericAdapter *adapter = [NetPrinterGenericAdapter alloc];
+            [adapter connectAndSend:host withPort:port printRawData:text success:successCallback fail:errorCallback];
+        }
     } @catch (NSException *exception) {
         errorCallback(@[exception.reason]);
     }

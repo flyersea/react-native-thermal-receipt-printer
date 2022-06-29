@@ -27,6 +27,9 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNThermalReceiptPrinter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNThermalReceiptPrinter.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		17AAE89F286C8CD100AC1985 /* libEpsonPrinterSDKarm64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEpsonPrinterSDKarm64.a; path = PrinterSDK/libEpsonPrinterSDKarm64.a; sourceTree = "<group>"; };
+		17AAE8A1286C8CEC00AC1985 /* libEpsonPrinterSDKx8664.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEpsonPrinterSDKx8664.a; path = PrinterSDK/libEpsonPrinterSDKx8664.a; sourceTree = "<group>"; };
+		17AAE8A3286C8CF400AC1985 /* libGenericPrinterSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGenericPrinterSDK.a; path = PrinterSDK/libGenericPrinterSDK.a; sourceTree = "<group>"; };
 		2248FA1622AE5CB40015571C /* RNBLEPrinter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNBLEPrinter.h; sourceTree = "<group>"; };
 		2248FA1722AE5CDD0015571C /* RNBLEPrinter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNBLEPrinter.m; sourceTree = "<group>"; };
 		225666E022B0ABD800EF323A /* RNUSBPrinter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNUSBPrinter.m; sourceTree = "<group>"; };
@@ -61,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				22BC54C8229E811F006DE50F /* libPrinterSDK.a */,
+				17AAE89F286C8CD100AC1985 /* libEpsonPrinterSDKarm64.a */,
+				17AAE8A3286C8CF400AC1985 /* libGenericPrinterSDK.a */,
+				17AAE8A1286C8CEC00AC1985 /* libEpsonPrinterSDKx8664.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
