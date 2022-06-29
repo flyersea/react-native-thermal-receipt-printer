@@ -300,8 +300,6 @@ RCT_EXPORT_METHOD(printQrCode:(NSString *)qrCode
     }
 }
 
-RCT_EXPORT_MODULE()
-
 RCT_EXPORT_METHOD(connectAndSend:(NSString *)host
                   withPort:(nonnull NSNumber *)port
                   printRawData:(NSString *)text
