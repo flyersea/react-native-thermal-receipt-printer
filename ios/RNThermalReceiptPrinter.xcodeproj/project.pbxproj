@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17AAE989286DACD500AC1985 /* libEpsonPrinterSDKarm64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AAE89F286C8CD100AC1985 /* libEpsonPrinterSDKarm64.a */; };
+		17AAE98A286DACD800AC1985 /* libEpsonPrinterSDKx8664.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AAE8A1286C8CEC00AC1985 /* libEpsonPrinterSDKx8664.a */; };
+		17AAE98B286DACDD00AC1985 /* libGenericPrinterSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AAE8A3286C8CF400AC1985 /* libGenericPrinterSDK.a */; };
 		2248FA1822AE5CDD0015571C /* RNBLEPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2248FA1722AE5CDD0015571C /* RNBLEPrinter.m */; };
 		225666E122B0ABD800EF323A /* RNUSBPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 225666E022B0ABD800EF323A /* RNUSBPrinter.m */; };
 		22BC54C9229E811F006DE50F /* libPrinterSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BC54C8229E811F006DE50F /* libPrinterSDK.a */; };
@@ -46,6 +49,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				22BC54C9229E811F006DE50F /* libPrinterSDK.a in Frameworks */,
+				17AAE989286DACD500AC1985 /* libEpsonPrinterSDKarm64.a in Frameworks */,
+				17AAE98B286DACDD00AC1985 /* libGenericPrinterSDK.a in Frameworks */,
+				17AAE98A286DACD800AC1985 /* libEpsonPrinterSDKx8664.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
