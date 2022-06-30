@@ -5,7 +5,7 @@
 //
 
 #import "USBPrinterGenericAdapter.h"
-#import "GenericPrinterSDK.h"
+#import "PrinterSDK.h"
 
 @implementation USBPrinterGenericAdapter
 

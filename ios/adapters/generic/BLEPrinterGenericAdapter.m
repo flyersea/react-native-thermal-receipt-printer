@@ -7,7 +7,7 @@
 #import <Foundation/Foundation.h>
 
 #import "BLEPrinterGenericAdapter.h"
-#import "GenericPrinterSDK.h"
+#import "PrinterSDK.h"
 #import "../../utils/NSDataAdditions.h"
 
 @interface ExtendedPrinter : Printer

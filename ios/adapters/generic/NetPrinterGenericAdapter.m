@@ -5,7 +5,7 @@
 //
 
 #import "NetPrinterGenericAdapter.h"
-#import "GenericPrinterSDK.h"
+#import "PrinterSDK.h"
 #import "../../utils/NSDataAdditions.h"
 
 @implementation NetPrinterGenericAdapter
