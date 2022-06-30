@@ -49,8 +49,6 @@ RCT_EXPORT_METHOD(closeConn) {
     // TODO
 }
 
-RCT_EXPORT_MODULE()
-
 RCT_EXPORT_METHOD(connectAndSend:(NSInteger)vendorId
                   withProductID:(NSInteger)productId
                   printRawData:(NSData *)text

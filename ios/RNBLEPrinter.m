@@ -245,8 +245,6 @@ RCT_EXPORT_METHOD(closeConn) {
     }
 }
 
-RCT_EXPORT_MODULE()
-
 RCT_EXPORT_METHOD(connectAndSend:(NSString *)bdAddress
                   printRawData:(NSString *)text
                   brand:(NSString *)brand
